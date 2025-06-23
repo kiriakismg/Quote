@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quotes - Michael Greek Tech</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Glass Background -->
+  <div class="glass-bg">
+    <div class="glass-orb orb-1"></div>
+    <div class="glass-orb orb-2"></div>
+    <div class="glass-orb orb-3"></div>
+  </div>
+
+  <div class="container glass-container">
+    <!-- Header with controls -->
+    <div class="header-controls">
+      <button id="theme-toggle" class="control-btn glass-btn" title="Αλλαγή θέματος">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button id="animation-toggle" class="control-btn glass-btn" title="Ενεργοποίηση/Απενεργοποίηση κίνησης">
+        <i class="fas fa-magic"></i>
+      </button>
+    </div>
+
+    <h1 class="glass-title">Random Quotes</h1>
+    
+    <div class="quote-container glass-quote">
+      <div class="quote-icon">
+        <i class="fas fa-quote-left"></i>
+      </div>
+      <blockquote id="quote-text" class="animated-text">
+        Click the button to get a random quote!
+      </blockquote>
+      <p id="quote-author" class="animated-author">- Unknown</p>
+    </div>
+
+    <div class="button-group">
+      <button id="new-quote-btn" class="main-btn glass-btn">
+        <i class="fas fa-refresh"></i>
+        <span>Get New Quote</span>
+      </button>
+      
+      <button id="save-quote-btn" class="action-btn glass-btn" title="Αποθήκευση Quote">
+        <i class="fas fa-heart"></i>
+      </button>
+      
+      <button id="share-quote-btn" class="action-btn glass-btn" title="Κοινοποίηση">
+        <i class="fas fa-share"></i>
+      </button>
+    </div>
+
+    <div id="loading" class="loading glass-loading">
+      <div class="loading-spinner"></div>
+      <span>Loading...</span>
+    </div>
+
+    <!-- Saved Quotes Panel -->
+    <div id="saved-panel" class="saved-panel glass-panel">
+      <div class="panel-header">
+        <h3><i class="fas fa-heart"></i> Αποθηκευμένα Quotes</h3>
+        <button id="close-panel" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div id="saved-quotes" class="saved-quotes-list">
+        <p class="empty-message">Δεν έχετε αποθηκευμένα quotes ακόμα!</p>
+      </div>
+      <button id="clear-saved" class="clear-btn glass-btn">
+        <i class="fas fa-trash"></i> Καθαρισμός όλων
+      </button>
+    </div>
+
+    <!-- View Saved Button -->
+    <button id="view-saved-btn" class="view-saved-btn glass-btn">
+      <i class="fas fa-heart"></i>
+      <span id="saved-count">0</span>
+    </button>
+  </div>
+
+  <!-- Toast notifications -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
